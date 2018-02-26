@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.revature.caliber</groupId>
+	<groupId>com.revature.hydra</groupId>
 	<artifactId>GradeRepositoryService</artifactId>
 	<version>1</version>
 	<packaging>jar</packaging>
 
 	<name>GradeRepositoryService</name>
-	<description>Microservice hosting the Caliber Grade database table</description>
+	<description>Microservice hosting the Hydra Grade database table</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
