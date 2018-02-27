@@ -31,7 +31,7 @@ public class GradeRepositoryServiceApplication {
     public Docket api() { 
         return new Docket(DocumentationType.SWAGGER_2)  
           .select()                                  
-          .apis(RequestHandlerSelectors.basePackage("com.revature.hydra.grade.grade.controller"))              
+          .apis(RequestHandlerSelectors.basePackage("com.revature.hydra.grade.controller"))              
           .paths(PathSelectors.any())                          
           .build();
     }
