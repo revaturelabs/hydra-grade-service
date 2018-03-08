@@ -3,7 +3,6 @@ package com.revature.hydra.grade.test.unit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
 
 import java.util.List;
 
@@ -12,12 +11,14 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.revature.beans.SimpleGrade;
 import com.revature.hydra.grade.data.GradeRepository;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
+@WebAppConfiguration
 public class GradeRepositoryTest {
 
 	private static final long TEST_ASSESSMENT_ID = 2063;

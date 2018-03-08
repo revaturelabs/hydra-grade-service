@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS CALIBER_GRADE;
+CREATE TABLE CALIBER_GRADE (GRADE_ID number (11) primary key, DATE_RECEIVED DATE, SCORE number (11), ASSESSMENT_ID number (11), TRAINEE_ID number (11));
+
 --------------------------------------------------------
 --  DDL for Sequence GRADE_ID_SEQUENCE
 --------------------------------------------------------
