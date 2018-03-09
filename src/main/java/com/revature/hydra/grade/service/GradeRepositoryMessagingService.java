@@ -29,7 +29,7 @@ public class GradeRepositoryMessagingService {
 	 * @param message
 	 * @return 
 	 */
-	@RabbitListener(queues = "revature.caliber.repos.grade.list")
+	@RabbitListener(queues = "revature.hydra.repos.grade.list")
 	public List<SimpleGrade> receiveList(String message) {
 		System.out.println(message);
 		JsonParser parser = new JsonParser();
@@ -49,7 +49,7 @@ public class GradeRepositoryMessagingService {
 	 * @param message
 	 * @return 
 	 */
-	@RabbitListener(queues = "revature.caliber.repos.grade")
+	@RabbitListener(queues = "revature.hydra.repos.grade")
 	public SimpleGrade receive(String message) {
 		System.out.println(message);
 		JsonParser parser = new JsonParser();
@@ -67,8 +67,8 @@ public class GradeRepositoryMessagingService {
 	 * @param message
 	 * @return 
 	 */
-	@RabbitListener(queues = "revature.caliber.service.grade.list")
-//	@RabbitListener(queues = "revature.caliber.service.test.list")
+	@RabbitListener(queues = "revature.hydra.service.grade.list")
+//	@RabbitListener(queues = "revature.hydra.service.test.list")
 	public List<Grade> recieveComplex(String message) {
 		System.out.println(message);
 		JsonParser parser = new JsonParser();
@@ -77,12 +77,12 @@ public class GradeRepositoryMessagingService {
 		return gradeRepositoryRequestDispatcher.processListComplexGradeRequest(request);
 	}
 	
-	@RabbitListener(queues = "revature.caliber.dto.grade")
+/*	@RabbitListener(queues = "revature.hydra.dto.grade")
 	public Grade receiveGradeDTORequest(String message) {
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(message);
 		JsonObject request = element.getAsJsonObject();
 		
 		return gradeRepositoryRequestDispatcher.processGradeDTORequest(request);
-	}
+	}*/
 }

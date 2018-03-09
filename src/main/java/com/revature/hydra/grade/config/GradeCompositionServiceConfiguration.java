@@ -27,8 +27,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class GradeCompositionServiceConfiguration {
 //	@Autowired
 //	GradeCompositionService gcs;
-		@Autowired
-		private GradeCompositionMessagingService mms;
+//		@Autowired
+//		private GradeCompositionMessagingService mms;
 	   @Bean
 	   public AmqpTemplate rabbitTemplate(ConnectionFactory factory) {
 	  //     RabbitTemplate rabbitTemplate = new RabbitTemplate(factory);

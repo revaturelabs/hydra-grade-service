@@ -22,7 +22,7 @@ public class GradeCompositionMessagingService {
 	private static final String LIST_ASSESSMENT_ROUTING_KEY = "7c6tMqRRPpZ8Z7xh";
 	private static final String SINGLE_TRAINEE_ROUTING_KEY = "JyoH3uRmktGn9MnW";
 	private static final String SINGLE_TRAINEE_LIST_ROUTING_KEY = "eRQ7GaBRnHgGdV9D";
-	private static final String RABBIT_REPO_EXCHANGE = "revature.caliber.repos";
+	private static final String RABBIT_REPO_EXCHANGE = "revature.hydra.repos";
 	
 	/**
 	 * Makes a json request for a simple trainee for the 
