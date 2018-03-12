@@ -29,12 +29,12 @@ public class GradeRepositoryServiceApplication {
 		SpringApplication.run(GradeRepositoryServiceApplication.class, args);
 	}
 	
-/*	@Bean
+	@Bean
     public Docket api() { 
         return new Docket(DocumentationType.SWAGGER_2)  
           .select()                                  
           .apis(RequestHandlerSelectors.basePackage("com.revature.hydra.grade.controller"))              
           .paths(PathSelectors.any())                          
           .build();
-    }*/
+    }
 }
