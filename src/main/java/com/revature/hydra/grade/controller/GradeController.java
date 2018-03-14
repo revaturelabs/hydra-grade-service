@@ -122,7 +122,7 @@ public class GradeController {
 		return new ResponseEntity<>(grades, status);
 	}
 	
-	//Get all grades by assessment
+	//Get all grades by trainee
 	@RequestMapping(value = "/grade/trainee/{traineeId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	//@PreAuthorize("hasAnyRole('VP', 'QC', 'TRAINER', 'STAGING','PANEL')")
 	//@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
@@ -133,7 +133,7 @@ public class GradeController {
 		return new ResponseEntity<>(grades, status);
 	}
 	
-	//Get all grades by assessment
+	//Get all grades by batch
 	@RequestMapping(value = "/grade/batch/{batchId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	//@PreAuthorize("hasAnyRole('VP', 'QC', 'TRAINER', 'STAGING','PANEL')")
 	//@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
