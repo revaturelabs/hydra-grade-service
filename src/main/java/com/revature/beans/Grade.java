@@ -45,6 +45,7 @@ public class Grade implements Serializable {
 		return assessment;
 	}
 
+	@JsonIgnore
 	public void setAssessment(Assessment assessment) {
 		this.assessment = assessment;
 	}

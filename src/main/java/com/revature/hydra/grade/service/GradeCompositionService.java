@@ -68,9 +68,9 @@ public class GradeCompositionService {
      * @param traineeId
      * @return
      */
-    public List<Grade> findAll(Long gradeId) {
+    public List<Grade> findAll() {
         List<SimpleGrade> basis = gradeRepository.findAll();
-        List<Grade> result = composeListOfGrade(basis);
+        List<Grade> result = composeListOfGrade(basis);       
         return result;
     }
 
@@ -191,6 +191,7 @@ public class GradeCompositionService {
         for (SimpleGrade curr : src) {
             Grade grade = composeGrade(curr);
             dest.add(grade);
+            System.out.println(grade.getGradeId());
         }
 
         return dest;
@@ -220,6 +221,7 @@ public class GradeCompositionService {
 
         return dest;
     }
+       
 
     /**
      * Finds grades in a given week and batch id.
