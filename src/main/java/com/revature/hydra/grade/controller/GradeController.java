@@ -110,4 +110,37 @@ public class GradeController {
 		HttpStatus status = grades.isEmpty() ? HttpStatus.NO_CONTENT : HttpStatus.OK;
 		return new ResponseEntity<>(grades, status);
 	}
+	
+	//Get all grades by assessment
+	@RequestMapping(value = "/grade/assessment/{assessmentId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	//@PreAuthorize("hasAnyRole('VP', 'QC', 'TRAINER', 'STAGING','PANEL')")
+	//@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
+	public ResponseEntity<List<Grade>> findAllByAssessment(@PathVariable Long assessmentId) {
+		log.debug("Getting all grades from assessment " + assessmentId);
+		List<Grade> grades = gradeService.findByAssessment(assessmentId);
+		HttpStatus status = grades.isEmpty() ? HttpStatus.NO_CONTENT : HttpStatus.OK;
+		return new ResponseEntity<>(grades, status);
+	}
+	
+	//Get all grades by assessment
+	@RequestMapping(value = "/grade/trainee/{traineeId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	//@PreAuthorize("hasAnyRole('VP', 'QC', 'TRAINER', 'STAGING','PANEL')")
+	//@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
+	public ResponseEntity<List<Grade>> findAllByTrainee(@PathVariable Integer traineeId) {
+		log.debug("Getting all grades from trainee " + traineeId);
+		List<Grade> grades = gradeService.findByTrainee(traineeId);
+		HttpStatus status = grades.isEmpty() ? HttpStatus.NO_CONTENT : HttpStatus.OK;
+		return new ResponseEntity<>(grades, status);
+	}
+	
+	//Get all grades by assessment
+	@RequestMapping(value = "/grade/batch/{batchId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	//@PreAuthorize("hasAnyRole('VP', 'QC', 'TRAINER', 'STAGING','PANEL')")
+	//@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
+	public ResponseEntity<List<Grade>> findAllByBatch(@PathVariable Integer batchId) {
+		log.debug("Getting all grades from batch " + batchId);
+		List<Grade> grades = gradeService.findByTrainee(batchId);
+		HttpStatus status = grades.isEmpty() ? HttpStatus.NO_CONTENT : HttpStatus.OK;
+		return new ResponseEntity<>(grades, status);
+	}
 }
